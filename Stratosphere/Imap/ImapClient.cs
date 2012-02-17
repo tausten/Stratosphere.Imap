@@ -521,7 +521,7 @@ namespace Stratosphere.Imap
                 throw new InvalidOperationException();
             }
 
-            if (bytes != null && part.ContentType.CharSet != null)
+            if (bytes != null && part.ContentType.MediaType.StartsWith("text"))
             {
                 try
                 {
